@@ -29,7 +29,7 @@ const initialBottles = [
     name: "Happy",
     color: "#FFFAE9",
     percent: 0,
-    poster: "cheery sasmine"
+    poster: "cheery jasmine"
   },
   {
     name: "Excited",
