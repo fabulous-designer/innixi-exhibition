@@ -1,0 +1,58 @@
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home header {
+  margin-top: 177px;
+}
+.home h1 {
+  color: #fff;
+  font-family: SFPro;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 96px;
+  letter-spacing: 0.88px;
+}
+.home h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 60px;
+  font-family: SFPro;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 96px;
+  letter-spacing: 0.6px;
+}
+
+.home img {
+  display: block;
+  margin: 72px 0 160px;
+  width: 214px;
+  height: 280px;
+}
+
+.home button {
+  display: flex;
+  width: 544px;
+  height: 128px;
+  padding: 32px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80px;
+  background: #fff;
+  box-shadow: 0px 3px 10px 0px rgba(116, 120, 251, 0.5);
+  color: #5456fe;
+  text-align: center;
+  font-family: SFPro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.25px;
+  border: none;
+  margin: 0 auto;
+}

@@ -1,0 +1,63 @@
+.poster {
+  padding: 80px;
+}
+.poster .poster-box {
+  padding: 48px 48px 32px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.10);
+}
+.poster .content {
+  color: #fff;
+  font-family: Apercu;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: start;
+}
+.poster .footer {
+  margin-top: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.poster .date {
+  color: #fff;
+  font-family: Apercu;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 24px */
+}
+.poster .website {
+  color: #fff;
+  font-family: Apercu;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+.poster button {
+  display: flex;
+  width: 674px;
+  height: 100px;
+  padding: 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  border-radius: 64px;
+  background: #fff;
+  box-shadow: 0px 3px 10px 0px rgba(116, 120, 251, 0.5);
+  border: none;
+
+  color: #5456fe;
+  text-align: center;
+  font-family: SFPro;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  margin-top: 64px;
+}

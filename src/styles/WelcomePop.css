@@ -1,0 +1,38 @@
+.welcome {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+.welcome .content {
+  display: flex;
+  padding: 56px 48px 48px 48px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 360px;
+  margin: auto;
+  border-radius: 32px;
+  border: 2px solid #ededed;
+  background: #fff;
+  box-shadow: 2px 5px 15px 0px rgba(180, 180, 180, 0.15);
+  box-sizing: content-box;
+
+  color: #333;
+  font-family: Apercu;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 1px;
+  text-align: start;
+}
+.welcome .content img {
+  display: block;
+  margin-top: 40px;
+  width: 41px;
+  height: 35px;
+}

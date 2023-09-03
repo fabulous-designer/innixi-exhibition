@@ -1,0 +1,35 @@
+.progress {
+  padding-top: 377px;
+}
+.progress h1 {
+  color: #fff;
+  font-family: Apercu;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+  letter-spacing: 0.5px;
+}
+.progress .progress-bar {
+  margin: 32px auto 0;
+  width: 594px;
+  height: 55px;
+  border-radius: 26px;
+  background: #fff;
+}
+.progress .progress-bar__inner {
+  border-radius: 26px;
+  height: 100%;
+  width: 55px;
+  opacity: 0.8;
+  background: linear-gradient(254deg, #dc54fe -23.52%, #6f3dff -23.51%, #a7cdff 89.11%);
+}
+@keyframes Loading {
+  from {
+    width: 55px;
+  }
+  to {
+    width: 100%;
+    background: linear-gradient(254deg, #770dff -24.13%, #a7cdff -24.12%, #a7cdff 89.13%);
+  }
+}
