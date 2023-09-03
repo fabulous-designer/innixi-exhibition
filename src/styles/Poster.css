@@ -1,12 +1,17 @@
 .poster {
-  padding: 80px;
+  padding: 80px 80px 0;
 }
 .poster .poster-box {
   padding: 48px 48px 32px;
+  height: 837px;
+  box-sizing: border-box;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.poster .content {
+.poster .poster-box p {
   color: #fff;
   font-family: Apercu;
   font-size: 52px;
@@ -15,8 +20,14 @@
   line-height: 120%;
   text-align: start;
 }
+.poster .poster-box .content {
+  margin-top: 40px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  overflow: hidden;
+}
 .poster .footer {
-  margin-top: 280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +50,7 @@
 }
 .poster button {
   display: flex;
-  width: 674px;
+  width: 100%;
   height: 100px;
   padding: 32px;
   justify-content: center;

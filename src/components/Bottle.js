@@ -5,10 +5,11 @@ import "../styles/Bottle.css";
 
 export default function Bottle({ bottle, onUpdate }) {
   const timer = useRef(null);
+  const bottleRef = useRef(null);
   const src = bottle.percent ? bottleActiveSrc : bottleSrc;
 
-  function handleStart(event) {
-    event.preventDefault();
+  function handleStart() {
+    // event.preventDefault();
     // console.log("start", event);
     let percent = bottle.percent;
     if (timer.current === null) {
@@ -20,6 +21,11 @@ export default function Bottle({ bottle, onUpdate }) {
           percent: percent,
         });
       }, 20);
+      if (bottleRef.current) {
+        bottleRef.current.addEventListener('mouseup', handleStop);
+        bottleRef.current.addEventListener('mouseleave', handleStop);
+        bottleRef.current.addEventListener('touchend', handleStop);
+      }
     }
   }
   function handleStop(event) {
@@ -29,14 +35,16 @@ export default function Bottle({ bottle, onUpdate }) {
       clearInterval(timer.current);
       timer.current = null;
     }
+    bottleRef.current.removeEventListener('mouseup', handleStop);
+    bottleRef.current.removeEventListener('mouseleave', handleStop);
+    bottleRef.current.removeEventListener('touchend', handleStop);
   }
   return (
     <div
+      ref={bottleRef}
       className={`bottle${bottle.percent ? " active" : ""}`}
       onTouchStart={handleStart}
-      onTouchEnd={handleStop}
       onMouseDown={handleStart}
-      onMouseUp={handleStop}
     >
       <div className="bottle-outer">
         <img src={src} alt="bottle"></img>
@@ -66,10 +74,7 @@ export default function Bottle({ bottle, onUpdate }) {
           </svg>
         </div>
       </div>
-      <div className="name">
-        {bottle.name}
-        {bottle.percent}
-      </div>
+      <div className="name">{bottle.name}</div>
     </div>
   );
 }
