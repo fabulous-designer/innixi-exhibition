@@ -1,19 +1,6 @@
 import "../styles/Poster.css";
 
-const months = [
-  'Jan',
-  'Feb',
-  'Mar',
-  'Apr',
-  'May',
-  'Jun',
-  'Jul',
-  'Aug',
-  'Sep',
-  'Oct',
-  'Nov',
-  'Dec',
-]
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 export default function Poster({ bottles, backHome }) {
   const filledBottles = bottles.filter((bottle) => bottle.percent);
@@ -32,14 +19,15 @@ export default function Poster({ bottles, backHome }) {
   for (let i = 0; i < diff; ++i) {
     sortedList[i].percent++;
   }
+  const words = list.map((bottle) => `${bottle.percent}% ${bottle.content}`);
 
   const content = showDefault
     ? `80% ${filledBottles[0].poster} and 20% essential oil`
-    : list.map((bottle) => `${bottle.percent}% ${bottle.content}`).join(", ");
+    : `${words.slice(0, words.length - 1).join(", ")} and ${words[words.length - 1]}`;
 
   const date = new Date();
   const year = date.getFullYear();
-  const month = months[date.getMonth()] ;
+  const month = months[date.getMonth()];
   const day = date.getDate();
 
   return (

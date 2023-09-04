@@ -5,7 +5,6 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
 }
 .welcome .content {
   display: flex;
@@ -14,7 +13,7 @@
   justify-content: flex-end;
   align-items: center;
   width: 360px;
-  margin: auto;
+  margin: 240px auto;
   border-radius: 32px;
   border: 2px solid #ededed;
   background: #fff;
