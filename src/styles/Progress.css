@@ -1,5 +1,7 @@
 .progress {
   padding-top: 377px;
+  height: 100vh;
+  box-sizing: border-box;
 }
 .progress h1 {
   color: #fff;
@@ -31,5 +33,11 @@
   to {
     width: 100%;
     background: linear-gradient(254deg, #770dff -24.13%, #a7cdff -24.12%, #a7cdff 89.13%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .progress {
+    padding-top: 228px;
   }
 }

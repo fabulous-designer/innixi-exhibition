@@ -1,5 +1,5 @@
 .bottle-box {
-  padding: 128px 0 72px;
+  padding: 128px 0 0;
   margin: 0 auto;
   width: 578px;
 }
@@ -53,5 +53,18 @@
   line-height: 28px;
   letter-spacing: 0.25px;
   text-transform: uppercase;
-  margin: 0 auto;
+  margin: 0 auto 72px;
+}
+
+@media (min-width: 1024px) {
+  .bottle-box {
+    padding: 92px 0 54px;
+    width: 810px;
+  }
+  .bottle-box .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .bottle-box button {
+    width: 476px;
+  }
 }
