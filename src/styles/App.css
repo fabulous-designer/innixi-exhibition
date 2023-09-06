@@ -1,11 +1,26 @@
 @font-face {
+  font-family: "Apercu-Light";
+  src: url("../fonts/ApercuLight.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Apercu";
   src: url("../fonts/ApercuRegular.ttf") format("truetype");
 }
 
 @font-face {
+  font-family: "Apercu-Medium";
+  src: url("../fonts/ApercuMedium.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "SFPro";
   src: url("../fonts/SFProTextRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SFPro-Bold";
+  src: url("../fonts/SFProTextBold.ttf") format("truetype");
 }
 
 .App {

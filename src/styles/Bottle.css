@@ -30,6 +30,7 @@
   bottom: -75px;
 }
 .bottle.active .name {
+  font-family: Apercu-Medium;
   font-weight: 500;
 }
 .bottle .name {

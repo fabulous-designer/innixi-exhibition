@@ -27,14 +27,12 @@
   line-height: 96px;
   letter-spacing: 0.6px;
 }
-
 .home img {
   display: block;
   margin: 72px 0 160px;
   width: 214px;
   height: 280px;
 }
-
 .home button {
   display: flex;
   width: 544px;
@@ -47,7 +45,7 @@
   box-shadow: 0px 3px 10px 0px rgba(116, 120, 251, 0.5);
   color: #5456fe;
   text-align: center;
-  font-family: SFPro;
+  font-family: SFPro-Bold;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
