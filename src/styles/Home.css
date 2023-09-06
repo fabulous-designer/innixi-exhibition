@@ -33,9 +33,6 @@
   width: 214px;
   height: 280px;
 }
-.only-mobile {
-  display: none;
-}
 .home button {
   display: flex;
   width: 544px;

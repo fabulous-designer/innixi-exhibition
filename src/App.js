@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useMediaQuery } from 'react-responsive'
 
 import Home from "./components/Home";
 import Bottles from "./components/Bottles";
@@ -84,6 +85,9 @@ const initialBottles = [
 function App() {
   const [step, setStep] = useState(0);
   const [bottles, setBottles] = useState([]);
+  
+  const isMobile = useMediaQuery({ query: '(max-width: 430px)' })
+  
   function handleStart() {
     setStep(1);
     setBottles(initialBottles);
@@ -93,7 +97,7 @@ function App() {
     setBottles(data);
   }
   const pages = {
-    0: <Home onStart={handleStart}></Home>,
+    0: <Home onStart={handleStart} isMobile={isMobile}></Home>,
     1: <Bottles initialBottles={bottles} onGeneratePoster={handleGeneratePoster} backHome={() => setStep(0)}></Bottles>,
     2: <Progress delay={3000} onSuccess={() => setStep(3)}></Progress>,
     3: <Poster bottles={bottles} backHome={() => setStep(0)}></Poster>,

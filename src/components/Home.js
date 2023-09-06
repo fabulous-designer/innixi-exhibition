@@ -3,7 +3,7 @@ import "../styles/Home.css";
 import logo from "../assets/logo.svg";
 import Welcome from "./WelcomePop";
 
-export default function Home({ onStart }) {
+export default function Home({ onStart, isMobile }) {
   const [isWelcome, setIsWelcome] = useState(false);
   return (
     <>
@@ -13,10 +13,8 @@ export default function Home({ onStart }) {
           <h1 className="m-0">I’m Innixi</h1>
         </header>
         <img src={logo} alt="logo"></img>
-        <p className="only-mobile">
-          Your companion through emotional moments
-        </p>
-        <button onClick={() => setIsWelcome(true)}>GET STARTED</button>
+        {isMobile && <p className="only-mobile">Your companion through emotional moments</p>}
+        <button onClick={() => (isMobile ? onStart() : setIsWelcome(true))}>GET STARTED</button>
       </div>
       {isWelcome && <Welcome onClick={onStart}></Welcome>}
     </>
