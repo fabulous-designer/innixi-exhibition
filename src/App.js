@@ -98,7 +98,7 @@ function App() {
   }
   const pages = {
     0: <Home onStart={handleStart} isMobile={isMobile}></Home>,
-    1: <Bottles initialBottles={bottles} onGeneratePoster={handleGeneratePoster} backHome={() => setStep(0)}></Bottles>,
+    1: <Bottles initialBottles={bottles}  isMobile={isMobile} onGeneratePoster={handleGeneratePoster} backHome={() => setStep(0)}></Bottles>,
     2: <Progress delay={3000} onSuccess={() => setStep(3)}></Progress>,
     3: <Poster bottles={bottles} backHome={() => setStep(0)}></Poster>,
   };

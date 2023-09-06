@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import Bottle from "./Bottle";
 import "../styles/Bottles.css";
 
-export default function Bottles({ initialBottles, onGeneratePoster, backHome }) {
+export default function Bottles({ initialBottles, isMobile, onGeneratePoster, backHome }) {
   const [bottles, setBottles] = useState(initialBottles);
   const timer = useRef(null);
 
@@ -43,7 +43,7 @@ export default function Bottles({ initialBottles, onGeneratePoster, backHome }) 
       </header>
       <div className="container">
         {bottles.map((item) => (
-          <Bottle key={item.name} bottle={item} onUpdate={updateBottle}></Bottle>
+          <Bottle key={item.name} bottle={item} isMobile={isMobile} onUpdate={updateBottle}></Bottle>
         ))}
       </div>
       {showButton && <button onClick={handleGeneratePoster}>generate INNIXI poster</button>}

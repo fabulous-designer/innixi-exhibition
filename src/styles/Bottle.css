@@ -45,3 +45,14 @@
   letter-spacing: 0.5px;
   user-select: none;
 }
+
+@media (max-width: 430px) {
+  .bottle img {
+    width: 32px;
+    height: 72.5px;
+  }
+  
+  .bottle .name {
+    font-size: 14px;
+  }
+}
