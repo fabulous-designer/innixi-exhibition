@@ -13,6 +13,9 @@ export default function Home({ onStart }) {
           <h1 className="m-0">I’m Innixi</h1>
         </header>
         <img src={logo} alt="logo"></img>
+        <p className="only-mobile">
+          Your companion through emotional moments
+        </p>
         <button onClick={() => setIsWelcome(true)}>GET STARTED</button>
       </div>
       {isWelcome && <Welcome onClick={onStart}></Welcome>}

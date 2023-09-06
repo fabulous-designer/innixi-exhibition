@@ -33,6 +33,9 @@
   width: 214px;
   height: 280px;
 }
+.only-mobile {
+  display: none;
+}
 .home button {
   display: flex;
   width: 544px;
@@ -53,4 +56,45 @@
   letter-spacing: 0.25px;
   border: none;
   margin: 0 auto 72px;
+}
+
+@media (max-width: 430px) {
+  .home header {
+    margin-top: 107px;
+  }
+  .home h1 {
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 0.25px;
+  }
+  .home h2 {
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: 0.25px;
+  }
+  .home img {
+    display: block;
+    margin: 26px 0 22px;
+    width: 90px;
+    height: 118px;
+  }
+  .only-mobile {
+    display: block;
+    width: 235px;
+    margin: 0 auto 91px;
+    color: #FFF;
+    text-align: center;
+    font-family: Apercu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+  }
+  .home button {
+    width: 272px;
+    height: 75px;
+    border-radius: 45px;
+    font-size: 18px;
+  }
 }
