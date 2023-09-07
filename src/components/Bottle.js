@@ -20,7 +20,7 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
           isActive: true,
           percent: percent,
         });
-      }, 20);
+      }, 16);
       if (bottleRef.current) {
         bottleRef.current.addEventListener('mouseup', handleStop);
         bottleRef.current.addEventListener('mouseleave', handleStop);
