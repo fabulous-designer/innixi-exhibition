@@ -16,7 +16,7 @@ export default function Home({ onStart, isMobile }) {
         {isMobile && <p className="only-mobile">Your companion through emotional moments</p>}
         <button onClick={() => (isMobile ? onStart() : setIsWelcome(true))}>GET STARTED</button>
       </div>
-      {isWelcome && <Welcome onClick={onStart}></Welcome>}
+      {!isMobile && isWelcome && <Welcome onClick={onStart}></Welcome>}
     </>
   );
 }
