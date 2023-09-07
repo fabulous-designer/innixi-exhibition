@@ -87,6 +87,11 @@ function App() {
   const [bottles, setBottles] = useState([]);
 
   const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
+  const isPC = useMediaQuery({ query: "(min-width: 1024px)" });
+
+  if (isPC && step === 0) {
+    handleStart()
+  }
 
   function handleStart() {
     setStep(1);
@@ -107,9 +112,9 @@ function App() {
       ></Bottles>
     ),
     2: <Progress delay={3000} isMobile={isMobile} onSuccess={() => setStep(3)}></Progress>,
-    3: <Poster bottles={bottles} backHome={() => setStep(0)}></Poster>,
+    3: <Poster bottles={bottles} isPC={isPC} backHome={() => setStep(0)}></Poster>,
   };
-  return <div className={`App${isMobile ? " mobile" : ""}`}>{pages[step]}</div>;
+  return <div className={`App${isMobile ? " mobile" : ""}${isPC ? " pc" : ""}`}>{pages[step]}</div>;
 }
 
 export default App;

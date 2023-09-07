@@ -2,7 +2,7 @@ import "../styles/Poster.css";
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-export default function Poster({ bottles, backHome }) {
+export default function Poster({ bottles, isPC, backHome }) {
   const filledBottles = bottles.filter((bottle) => bottle.percent);
   const showDefault = filledBottles.length === 1;
   const total = filledBottles.reduce((res, bottle) => res + bottle.percent, 0);
@@ -42,7 +42,7 @@ export default function Poster({ bottles, backHome }) {
           <div className="website">innixi.app</div>
         </div>
       </div>
-      <button onClick={backHome}>back TO HOME</button>
+      <button onClick={backHome}>{isPC ? 'RESTART' : 'back TO HOME'}</button>
     </div>
   );
 }
