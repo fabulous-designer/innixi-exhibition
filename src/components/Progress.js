@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "../styles/Progress.css";
 
-export default function Progress({ delay, onSuccess }) {
+export default function Progress({ delay, isMobile, onSuccess }) {
   const timerRef = useRef(null);
   if (timerRef.current === null) {
     timerRef.current = setTimeout(onSuccess, delay);
@@ -15,7 +15,7 @@ export default function Progress({ delay, onSuccess }) {
       <div className="progress-bar">
         <div
           className="progress-bar__inner"
-          style={{ animation: `${delay / 1000 - 0.5}s linear .5s 1 both Loading` }}
+          style={{ animation: `${delay / 1000 - 0.5}s linear .5s 1 both ${isMobile ? "MobileLoading" : "Loading"}` }}
         ></div>
       </div>
     </div>

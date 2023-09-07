@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 .progress h1 {
+  margin: auto;
   color: #fff;
   font-family: Apercu-Medium;
   font-size: 40px;
@@ -33,6 +34,35 @@
   to {
     width: 100%;
     background: linear-gradient(254deg, #770dff -24.13%, #a7cdff -24.12%, #a7cdff 89.13%);
+  }
+}
+
+.mobile .progress {
+  padding-top: 271px;
+}
+.mobile .progress h1 {
+  width: 320px;
+  font-size: 28px;
+  line-height: 28px;
+}
+.mobile .progress .progress-bar {
+  margin: 47px auto 0;
+  width: 311px;
+  height: 32px;
+  border-radius: 15px;
+}
+.mobile .progress .progress-bar__inner {
+  width: 32px;
+  border-radius: 15px;
+}
+
+@keyframes MobileLoading {
+  from {
+    width: 32px;
+  }
+  to {
+    width: 100%;
+    background: linear-gradient(74deg, #6148ff -67.2%, #6f3dff -67.18%, #a7cdff 89.11%);
   }
 }
 

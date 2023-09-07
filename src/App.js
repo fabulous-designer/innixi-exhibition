@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 
 import Home from "./components/Home";
 import Bottles from "./components/Bottles";
@@ -85,9 +85,9 @@ const initialBottles = [
 function App() {
   const [step, setStep] = useState(0);
   const [bottles, setBottles] = useState([]);
-  
-  const isMobile = useMediaQuery({ query: '(max-width: 430px)' })
-  
+
+  const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
+
   function handleStart() {
     setStep(1);
     setBottles(initialBottles);
@@ -98,11 +98,18 @@ function App() {
   }
   const pages = {
     0: <Home onStart={handleStart} isMobile={isMobile}></Home>,
-    1: <Bottles initialBottles={bottles}  isMobile={isMobile} onGeneratePoster={handleGeneratePoster} backHome={() => setStep(0)}></Bottles>,
-    2: <Progress delay={3000} onSuccess={() => setStep(3)}></Progress>,
+    1: (
+      <Bottles
+        initialBottles={bottles}
+        isMobile={isMobile}
+        onGeneratePoster={handleGeneratePoster}
+        backHome={() => setStep(0)}
+      ></Bottles>
+    ),
+    2: <Progress delay={3000} isMobile={isMobile} onSuccess={() => setStep(3)}></Progress>,
     3: <Poster bottles={bottles} backHome={() => setStep(0)}></Poster>,
   };
-  return <div className="App">{pages[step]}</div>;
+  return <div className={`App${isMobile ? " mobile" : ""}`}>{pages[step]}</div>;
 }
 
 export default App;

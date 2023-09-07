@@ -56,37 +56,35 @@
   margin: 0 auto 72px;
 }
 
-@media (max-width: 430px) {
-  .bottle-box {
-    padding: 72px 0 0;
-    margin: 0 auto;
-    width: 285px;
-  }
-  .bottle-box h1 {
-    font-size: 22px;
-    line-height: 28px; 
-    letter-spacing: 0.5px;
-  }
-  .bottle-box h2 {
-    font-size: 18px;
-    letter-spacing: 0.5px;
-  }
-  .bottle-box .container {
-    margin: 28px auto 64px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 30px;
-  }
-  .bottle-box button {
-    width: 287px;
-    height: 67px;
-    padding: 24px 32px;
-    font-size: 16px;
-    gap: 8px;
-    border-radius: 45px;
-    line-height: normal;
-    margin: 0 auto 53px;
-  }
+.mobile .bottle-box {
+  padding: 72px 0 0;
+  margin: 0 auto;
+  width: 285px;
+}
+.mobile .bottle-box h1 {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+}
+.mobile .bottle-box h2 {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.mobile .bottle-box .container {
+  margin: 28px auto 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 30px;
+}
+.mobile .bottle-box button {
+  width: 287px;
+  height: 67px;
+  padding: 24px 32px;
+  font-size: 16px;
+  gap: 8px;
+  border-radius: 45px;
+  line-height: normal;
+  margin: 0 auto 53px;
 }
 
 @media (min-width: 1024px) {
