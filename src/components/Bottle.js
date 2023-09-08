@@ -50,9 +50,9 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
         <img src={src} alt="bottle"></img>
         <div className="water">
           <svg
-            style={{ bottom: `${parseInt((isMobile ? 32 : 75) * (bottle.percent / 100 - 1))}px`, fill: bottle.color }}
-            width={isMobile ? 26 : 44}
-            height={isMobile ? 32 : 75}
+            style={{ bottom: `${parseInt((isMobile ? 40 : 75) * (bottle.percent / 100 - 1))}px`, fill: bottle.color }}
+            width={isMobile ? 28 : 44}
+            height={isMobile ? 40 : 75}
             viewBox="0 0 44 75"
             xmlns="http://www.w3.org/2000/svg"
           >

@@ -39,7 +39,7 @@ export default function Bottles({ initialBottles, isMobile, onGeneratePoster, ba
     <div className="bottle-box">
       <header>
         <h1 className="m-0">How are you feeling today?</h1>
-        <h2 className="m-0">Tap & hold bottles to fill them up</h2>
+        <h2 className="m-0">{isMobile ? "Tap & hold to fill up bottles" : "Tap & hold bottles to fill them up"}</h2>
       </header>
       <div className="container">
         {bottles.map((item) => (

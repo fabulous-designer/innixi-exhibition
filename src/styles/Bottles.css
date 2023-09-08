@@ -1,5 +1,5 @@
 .bottle-box {
-  padding: 128px 0 0;
+  padding: 88px 0 0;
   margin: 0 auto;
   width: 578px;
 }
@@ -24,7 +24,7 @@
   letter-spacing: 1px;
 }
 .bottle-box .container {
-  margin: 56px auto 83px;
+  margin: 56px auto 67px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-row-gap: 56px;
@@ -49,7 +49,7 @@
   font-family: SFPro-Bold;
   font-size: 28px;
   font-style: normal;
-  font-weight: 700;
+  /* font-weight: 700; */
   line-height: 28px;
   letter-spacing: 0.25px;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
 }
 
 .mobile .bottle-box {
-  padding: 72px 0 0;
+  padding: 56px 0 0;
   margin: 0 auto;
   width: 285px;
 }
@@ -65,16 +65,17 @@
   font-size: 22px;
   line-height: 28px;
   letter-spacing: 0.5px;
+  margin-bottom: 4px;
 }
 .mobile .bottle-box h2 {
   font-size: 18px;
   letter-spacing: 0.5px;
 }
 .mobile .bottle-box .container {
-  margin: 28px auto 64px;
+  margin: 28px auto 32px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 30px;
+  grid-row-gap: 28px;
 }
 .mobile .bottle-box button {
   width: 287px;

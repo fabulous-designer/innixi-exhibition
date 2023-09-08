@@ -6,7 +6,7 @@
   align-items: center;
 }
 .home header {
-  margin-top: 152px;
+  margin-top: 134px;
 }
 .home h1 {
   color: #fff;
@@ -48,7 +48,7 @@
   font-family: SFPro-Bold;
   font-size: 32px;
   font-style: normal;
-  font-weight: 700;
+  /* font-weight: 700; */
   line-height: 40px;
   letter-spacing: 0.25px;
   border: none;
@@ -92,4 +92,5 @@
   height: 75px;
   border-radius: 45px;
   font-size: 18px;
+  padding: 25px 32px;
 }

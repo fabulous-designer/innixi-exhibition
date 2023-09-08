@@ -11,11 +11,11 @@ export default function Progress({ delay, isMobile, onSuccess }) {
   }
   return (
     <div className="progress">
-      <h1 className="m-0">Creating your Innixi poster...</h1>
+      <h1 className="m-0">{isMobile ? "Creating your poster" : "Creating your Innixi poster..."}</h1>
       <div className="progress-bar">
         <div
           className="progress-bar__inner"
-          style={{ animation: `${delay / 1000 - 0.5}s linear .5s 1 both ${isMobile ? "MobileLoading" : "Loading"}` }}
+          style={{ animation: `${delay / 1000}s linear 0s 1 both ${isMobile ? "MobileLoading" : "Loading"}` }}
         ></div>
       </div>
     </div>
