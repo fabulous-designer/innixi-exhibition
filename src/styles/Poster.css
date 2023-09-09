@@ -78,7 +78,7 @@
 }
 .mobile .poster .poster-box {
   padding: 16px 24px 24px;
-  height: 560px;
+  height: 480px;
 }
 .mobile .poster .poster-box p {
   font-size: 32px;
@@ -110,6 +110,9 @@
 }
 .pc .poster .poster-box p {
   font-size: 54px;
+}
+.pc .poster .poster-box .content {
+  -webkit-line-clamp: 3;
 }
 .pc .poster button {
   width: 243px;

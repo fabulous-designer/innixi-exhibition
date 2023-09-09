@@ -24,3 +24,10 @@ img {
 .m-0 {
   margin: 0;
 }
+
+
+@media (min-width: 1024px) {
+  #root {
+    background: linear-gradient(180deg, #9F54FE 0%, #6F3DFF 0.02%, #A7CDFF 207.08%);
+  }
+}

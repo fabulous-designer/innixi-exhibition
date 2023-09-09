@@ -90,7 +90,7 @@ function App() {
   const isPC = useMediaQuery({ query: "(min-width: 1024px)" });
 
   if (isPC && step === 0) {
-    handleStart()
+    handleStart();
   }
 
   function handleStart() {
@@ -111,7 +111,7 @@ function App() {
         backHome={() => setStep(0)}
       ></Bottles>
     ),
-    2: <Progress delay={3000} isMobile={isMobile} onSuccess={() => setStep(3)}></Progress>,
+    2: <Progress delay={3000} isMobile={isMobile} isPC={isPC} onSuccess={() => setStep(3)}></Progress>,
     3: <Poster bottles={bottles} isPC={isPC} backHome={() => setStep(0)}></Poster>,
   };
   return <div className={`App${isMobile ? " mobile" : ""}${isPC ? " pc" : ""}`}>{pages[step]}</div>;

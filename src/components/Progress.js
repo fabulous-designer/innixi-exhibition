@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "../styles/Progress.css";
 
-export default function Progress({ delay, isMobile, onSuccess }) {
+export default function Progress({ delay, isMobile, isPC, onSuccess }) {
   const timerRef = useRef(null);
   if (timerRef.current === null) {
     timerRef.current = setTimeout(onSuccess, delay);
@@ -11,7 +11,13 @@ export default function Progress({ delay, isMobile, onSuccess }) {
   }
   return (
     <div className="progress">
-      <h1 className="m-0">{isMobile ? "Creating your poster" : "Creating your Innixi poster..."}</h1>
+      <h1 className="m-0">
+        {isMobile
+          ? "Creating your poster..."
+          : isPC
+          ? "Creating your unique Innixi poster..."
+          : "Creating your Innixi poster..."}
+      </h1>
       <div className="progress-bar">
         <div
           className="progress-bar__inner"

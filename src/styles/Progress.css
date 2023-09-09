@@ -42,11 +42,11 @@
 }
 .mobile .progress h1 {
   width: 320px;
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 24px;
 }
 .mobile .progress .progress-bar {
-  margin: 47px auto 0;
+  margin: 32px auto 0;
   width: 311px;
   height: 32px;
   border-radius: 15px;
@@ -68,4 +68,8 @@
 
 .pc .progress {
   padding-top: 228px;
+}
+
+.pc .progress .progress-bar {
+  width: 800px;
 }
