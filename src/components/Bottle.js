@@ -22,9 +22,9 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
         });
       }, 16);
       if (bottleRef.current) {
-        bottleRef.current.addEventListener('mouseup', handleStop);
-        bottleRef.current.addEventListener('mouseleave', handleStop);
-        bottleRef.current.addEventListener('touchend', handleStop);
+        bottleRef.current.addEventListener("mouseup", handleStop);
+        bottleRef.current.addEventListener("mouseleave", handleStop);
+        bottleRef.current.addEventListener("touchend", handleStop);
       }
     }
   }
@@ -35,9 +35,9 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
       clearInterval(timer.current);
       timer.current = null;
     }
-    bottleRef.current.removeEventListener('mouseup', handleStop);
-    bottleRef.current.removeEventListener('mouseleave', handleStop);
-    bottleRef.current.removeEventListener('touchend', handleStop);
+    bottleRef.current.removeEventListener("mouseup", handleStop);
+    bottleRef.current.removeEventListener("mouseleave", handleStop);
+    bottleRef.current.removeEventListener("touchend", handleStop);
   }
   return (
     <div
@@ -45,10 +45,11 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
       className={`bottle${bottle.percent ? " active" : ""}`}
       onTouchStart={handleStart}
       onMouseDown={handleStart}
+      name={bottle.name}
     >
-      <div className="bottle-outer">
-        <img src={src} alt="bottle"></img>
-        <div className="water">
+      <div className="bottle-outer" name={bottle.name}>
+        <img src={src} alt="bottle" name={bottle.name}></img>
+        <div className="water" name={bottle.name}>
           <svg
             style={{ bottom: `${parseInt((isMobile ? 40 : 75) * (bottle.percent / 100 - 1))}px`, fill: bottle.color }}
             width={isMobile ? 28 : 44}
@@ -74,7 +75,9 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
           </svg>
         </div>
       </div>
-      <div className="name">{bottle.name}</div>
+      <div className="name" name={bottle.name}>
+        {bottle.name}
+      </div>
     </div>
   );
 }
