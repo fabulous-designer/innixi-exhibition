@@ -46,7 +46,7 @@ export default function Bottles({ initialBottles, isMobile, onGeneratePoster, ba
           <Bottle key={item.name} bottle={item} isMobile={isMobile} onUpdate={updateBottle}></Bottle>
         ))}
       </div>
-      {showButton && <button onClick={handleGeneratePoster}>generate INNIXI poster</button>}
+      {showButton && <button onClick={handleGeneratePoster} id="generatePosterBtn">generate INNIXI poster</button>}
     </div>
   );
 }

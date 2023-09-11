@@ -47,9 +47,9 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
       onMouseDown={handleStart}
       name={bottle.name}
     >
-      <div className="bottle-outer" name={bottle.name}>
-        <img src={src} alt="bottle" name={bottle.name}></img>
-        <div className="water" name={bottle.name}>
+      <div className="bottle-outer" data-event-data={bottle.name}>
+        <img src={src} alt="bottle" data-event-data={bottle.name}></img>
+        <div className="water" data-event-data={bottle.name}>
           <svg
             style={{ bottom: `${parseInt((isMobile ? 40 : 75) * (bottle.percent / 100 - 1))}px`, fill: bottle.color }}
             width={isMobile ? 28 : 44}
@@ -75,7 +75,7 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
           </svg>
         </div>
       </div>
-      <div className="name" name={bottle.name}>
+      <div className="name" data-event-data={bottle.name}>
         {bottle.name}
       </div>
     </div>

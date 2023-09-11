@@ -42,7 +42,7 @@ export default function Poster({ bottles, isPC, backHome }) {
           <div className="website">innixi.app</div>
         </div>
       </div>
-      <button onClick={backHome}>{isPC ? 'RESTART' : 'back TO HOME'}</button>
+      <button onClick={backHome} id="backHomeBtn">{isPC ? 'RESTART' : 'back TO HOME'}</button>
     </div>
   );
 }

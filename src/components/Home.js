@@ -14,7 +14,7 @@ export default function Home({ onStart, isMobile }) {
         </header>
         <img src={logo} alt="logo"></img>
         {isMobile && <p className="only-mobile">Your companion through emotional moments</p>}
-        <button onClick={() => (isMobile ? onStart() : setIsWelcome(true))}>GET STARTED</button>
+        <button onClick={() => (isMobile ? onStart() : setIsWelcome(true))} id="startBtn">GET STARTED</button>
       </div>
       {!isMobile && isWelcome && <Welcome onClick={onStart}></Welcome>}
     </>
