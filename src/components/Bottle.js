@@ -8,6 +8,8 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
   const bottleRef = useRef(null);
   const src = bottle.percent ? bottleActiveSrc : bottleSrc;
 
+  const onEvent = "ontouchstart" in document ? { onTouchStart: handleStart } : { onMouseDown: handleStart };
+
   function handleStart() {
     // event.preventDefault();
     // console.log("start", event);
@@ -28,8 +30,8 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
       }
     }
   }
-  function handleStop(event) {
-    event.preventDefault();
+  function handleStop() {
+    // event.preventDefault();
     // console.log("stop", event);
     if (timer.current) {
       clearInterval(timer.current);
@@ -43,9 +45,8 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
     <div
       ref={bottleRef}
       className={`bottle${bottle.percent ? " active" : ""}`}
-      onTouchStart={handleStart}
-      onMouseDown={handleStart}
       data-event-data={bottle.name}
+      {...onEvent}
     >
       <div className="bottle-outer" data-event-data={bottle.name}>
         <img src={src} alt="bottle" data-event-data={bottle.name}></img>

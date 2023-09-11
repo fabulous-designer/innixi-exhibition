@@ -4,6 +4,7 @@
 .poster .poster-box {
   padding: 48px 48px 32px;
   height: 805px;
+  min-width: 496px;
   box-sizing: border-box;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.1);
@@ -79,6 +80,7 @@
 .mobile .poster .poster-box {
   padding: 16px 24px 24px;
   height: 480px;
+  min-width: 280px;
 }
 .mobile .poster .poster-box p {
   font-size: 32px;
