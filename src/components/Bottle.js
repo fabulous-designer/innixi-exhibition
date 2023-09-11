@@ -45,7 +45,7 @@ export default function Bottle({ bottle, isMobile, onUpdate }) {
       className={`bottle${bottle.percent ? " active" : ""}`}
       onTouchStart={handleStart}
       onMouseDown={handleStart}
-      name={bottle.name}
+      data-event-data={bottle.name}
     >
       <div className="bottle-outer" data-event-data={bottle.name}>
         <img src={src} alt="bottle" data-event-data={bottle.name}></img>
