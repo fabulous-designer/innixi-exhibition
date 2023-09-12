@@ -15,7 +15,7 @@ img {
 #root {
   min-height: 100vh;
   height: auto;
-  min-width: 100vw;
+  min-width: 100%;
   width: fit-content;
   position: relative;
   background: linear-gradient(0deg, #9f54fe 0%, #6f3dff 0.02%, #a7cdff 170.26%);
