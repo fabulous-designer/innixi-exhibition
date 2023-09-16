@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import "../styles/Poster.css";
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -29,9 +30,29 @@ export default function Poster({ bottles, isPC, backHome }) {
   const year = date.getFullYear();
   const month = months[date.getMonth()];
   const day = date.getDate();
+  const timer = useRef(null);
 
+  function resetTimer() {
+    if (timer.current) {
+      clearTimeout(timer.current);
+      timer.current = null;
+    }
+    timer.current = setTimeout(() => {
+      backHome();
+    }, 120000);
+  }
+
+  function handleClick() {
+    backHome();
+    if (timer.current) {
+      clearTimeout(timer.current);
+    }
+  }
+  
+  resetTimer();
+  const onEvent = "ontouchstart" in document ? { onTouchStart: resetTimer } : { onMouseDown: resetTimer };
   return (
-    <div className="poster">
+    <div className="poster" {...onEvent}>
       <div className="poster-box">
         <div>
           <p className="m-0">I’m doing alright but truth be told, I’m a cuppa brewed of...</p>
@@ -42,7 +63,9 @@ export default function Poster({ bottles, isPC, backHome }) {
           <div className="website">innixi.app</div>
         </div>
       </div>
-      <button onClick={backHome} id="backHomeBtn">{isPC ? 'RESTART' : 'back TO HOME'}</button>
+      <button onClick={handleClick} id="backHomeBtn">
+        {isPC ? "RESTART" : "back TO HOME"}
+      </button>
     </div>
   );
 }
