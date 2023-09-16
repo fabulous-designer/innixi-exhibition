@@ -67,9 +67,15 @@
 }
 
 .pc .progress {
-  padding-top: 228px;
+  padding-top: 300px;
+}
+
+.pc .progress h1 {
+  font-size: 36px;
+  line-height: 40px;
 }
 
 .pc .progress .progress-bar {
-  width: 800px;
+  margin: 40px auto;
+  width: 824px;
 }
