@@ -14,6 +14,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "build:component": "rollup -c",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
@@ -36,7 +37,13 @@
     ]
   },
   "devDependencies": {
+    "@rollup/plugin-image": "^3.0.2",
+    "postcss": "^8.4.29",
     "preload-webpack-plugin": "^3.0.0-beta.4",
-    "react-app-rewired": "^2.2.1"
+    "react-app-rewired": "^2.2.1",
+    "rollup": "^2.79.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-postcss": "^4.0.2"
   }
 }

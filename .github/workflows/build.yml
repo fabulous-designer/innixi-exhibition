@@ -21,8 +21,14 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Upload artifact
+          npm run build:component
+      - name: Upload artifact web
         uses: actions/upload-artifact@v3
         with:
           name: innixi-web
           path: ./build
+      - name: Upload artifact component
+        uses: actions/upload-artifact@v3
+        with:
+          name: innixi-web-es
+          path: ./es
