@@ -3,32 +3,13 @@ body {
   text-align: center;
 }
 
-* {
-  user-select: none;
-}
-
-img {
-  -webkit-user-drag: none;
-  pointer-events: none;
-}
-
 #root {
   min-height: 100vh;
   height: auto;
   min-width: 100%;
   width: fit-content;
   position: relative;
-  background: linear-gradient(0deg, #9f54fe 0%, #6f3dff 0.02%, #a7cdff 170.26%);
-  overflow-y: hidden;
-}
 
-.m-0 {
-  margin: 0;
-}
-
-
-@media (min-width: 1024px) {
-  #root {
-    background: linear-gradient(180deg, #9F54FE 0%, #6F3DFF 0.02%, #A7CDFF 207.08%);
-  }
+  display: flex;
+  flex-direction: column;
 }

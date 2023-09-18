@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useMediaQuery } from "react-responsive";
 
 import Home from "./components/Home";
 import Bottles from "./components/Bottles";
@@ -82,14 +81,16 @@ const initialBottles = [
   },
 ];
 
-function App() {
+/**
+ * for fill parent height, should set parent node style "display: flex; flex-direction: column;"
+ * @param {*} props: { mode= mobile | pad (default) | pc }
+ * @returns 
+ */
+function App({ mode = "pad" }) {
   const [step, setStep] = useState(0);
   const [bottles, setBottles] = useState([]);
 
-  const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
-  const isPC = useMediaQuery({ query: "(min-width: 1024px)" });
-
-  if (isPC && step === 0) {
+  if (mode === "pc" && step === 0) {
     handleStart();
   }
 
@@ -102,19 +103,19 @@ function App() {
     setBottles(data);
   }
   const pages = {
-    0: <Home onStart={handleStart} isMobile={isMobile}></Home>,
+    0: <Home onStart={handleStart} mode={mode}></Home>,
     1: (
       <Bottles
         initialBottles={bottles}
-        isMobile={isMobile}
+        isMobile={mode === "mobile"}
         onGeneratePoster={handleGeneratePoster}
         backHome={() => setStep(0)}
       ></Bottles>
     ),
-    2: <Progress delay={3000} isMobile={isMobile} isPC={isPC} onSuccess={() => setStep(3)}></Progress>,
-    3: <Poster bottles={bottles} isPC={isPC} backHome={() => setStep(0)}></Poster>,
+    2: <Progress delay={3000} mode={mode} onSuccess={() => setStep(3)}></Progress>,
+    3: <Poster bottles={bottles} mode={mode} backHome={() => setStep(0)}></Poster>,
   };
-  return <div className={`App${isMobile ? " mobile" : ""}${isPC ? " pc" : ""}`}>{pages[step]}</div>;
+  return <div className={`App${mode === "pad" ? "" : " " + mode}`}>{pages[step]}</div>;
 }
 
 export default App;

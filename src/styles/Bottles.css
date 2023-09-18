@@ -1,5 +1,5 @@
 .bottle-box {
-  padding: 88px 0 0;
+  padding: 88px 0 72px;
   margin: 0 auto;
   width: 578px;
 }
@@ -53,11 +53,11 @@
   line-height: 28px;
   letter-spacing: 0.25px;
   text-transform: uppercase;
-  margin: 0 auto 72px;
+  margin: 0 auto;
 }
 
 .mobile .bottle-box {
-  padding: 56px 0 0;
+  padding: 56px 0 53px;
   margin: 0 auto;
   width: 285px;
 }
@@ -85,11 +85,10 @@
   gap: 8px;
   border-radius: 45px;
   line-height: normal;
-  margin: 0 auto 53px;
 }
 
 .pc .bottle-box {
-  padding: 92px 0 0;
+  padding: 92px 0 54px;
   width: 910px;
 }
 .pc .bottle-box h1 {
@@ -108,7 +107,6 @@
 .pc .bottle-box button {
   width: 400px;
   height: 64px;
-  margin: 0 auto 54px;
   padding: 16px 32px;
   gap: 32px;
   font-size: 18px;

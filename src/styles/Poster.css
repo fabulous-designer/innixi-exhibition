@@ -1,5 +1,5 @@
 .poster {
-  padding: 80px 80px 0;
+  padding: 80px 80px 72px;
 }
 .poster .poster-box {
   padding: 48px 48px 32px;
@@ -72,11 +72,11 @@
   line-height: 28px;
   letter-spacing: 0.25px;
   text-transform: uppercase;
-  margin: 64px 0 72px;
+  margin: 64px 0 0;
 }
 
 .mobile .poster {
-  padding: 32px 32px 0;
+  padding: 32px;
 }
 .mobile .poster .poster-box {
   padding: 16px 24px 24px;
@@ -101,11 +101,11 @@
 
   font-size: 16px;
   line-height: normal;
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .pc .poster {
-  padding: 64px 72px 0;
+  padding: 64px 72px 72px;
   max-width: 1200px;
   margin: auto;
 }
@@ -125,5 +125,5 @@
   padding: 16px 24px;
   font-size: 18px;
   line-height: 24px;
-  margin: 40px 0 72px;
+  margin: 40px 0 0;
 }

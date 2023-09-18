@@ -25,4 +25,24 @@
 
 .App {
   width: 100%;
+  text-align: center;
+  background: linear-gradient(0deg, #9f54fe 0%, #6f3dff 0.02%, #a7cdff 170.26%);
+  flex: 1;
+}
+
+.App * {
+  user-select: none;
+}
+
+.App img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.App .m-0 {
+  margin: 0;
+}
+
+.App.pc {
+  background: linear-gradient(180deg, #9F54FE 0%, #6F3DFF 0.02%, #A7CDFF 207.08%);
 }

@@ -3,7 +3,7 @@ import "../styles/Poster.css";
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-export default function Poster({ bottles, isPC, backHome }) {
+export default function Poster({ bottles, mode, backHome }) {
   const filledBottles = bottles.filter((bottle) => bottle.percent);
   const showDefault = filledBottles.length === 1;
   const total = filledBottles.reduce((res, bottle) => res + bottle.percent, 0);
@@ -48,7 +48,7 @@ export default function Poster({ bottles, isPC, backHome }) {
       clearTimeout(timer.current);
     }
   }
-  
+
   resetTimer();
   const onEvent = "ontouchstart" in document ? { onTouchStart: resetTimer } : { onMouseDown: resetTimer };
   return (
@@ -64,7 +64,7 @@ export default function Poster({ bottles, isPC, backHome }) {
         </div>
       </div>
       <button onClick={handleClick} id="backHomeBtn">
-        {isPC ? "RESTART" : "back TO HOME"}
+        {mode === "pc" ? "RESTART" : "back TO HOME"}
       </button>
     </div>
   );
