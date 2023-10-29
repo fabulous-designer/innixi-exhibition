@@ -6,6 +6,7 @@ import Progress from "./components/Progress";
 import Poster from "./components/Poster";
 import "./styles/App.css";
 
+// 初始瓶子数据 name瓶子名称，color水的颜色(渐变颜色id)，poster海报对应词条，percent水位百分比
 const initialBottles = [
   {
     name: "Calm",
@@ -83,7 +84,7 @@ const initialBottles = [
 
 /**
  * for fill parent height, should set parent node style "display: flex; flex-direction: column;"
- * @param {*} props: { mode= mobile | pad (default) | pc }
+ * @param {*} mode:模式pad(默认)|mobile|pc;
  * @returns 
  */
 function App({ mode = "pad" }) {

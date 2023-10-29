@@ -68,3 +68,54 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### 文件结构
+```
+.github
+    workflows // github工作流配置文件文件夹用于配置Action
+        build.yml // 打包工作流配置文件
+public // 静态文件夹
+    favicon.ico // tab标签icon
+    favicon.svg // safari tab及桌面标签icon
+    index.html // 网页入口模板
+    robots.txt // 爬虫配置文件
+src // 源文件文件夹
+    assets // 资源文件夹
+        bottle_active.svg // 激活时瓶子轮廓图片
+        bottle.svg // 瓶子轮廓图片
+        check.svg // 首页提示勾标签
+        logo.svg // 首页logo
+    components // 模块文件夹
+        Bottle.js // 单个瓶子
+        Bottles.js // 瓶子列表
+        Home.js // 首页
+        Poster.js // 海报页
+        Progress.js // 进度条也
+        WelcomePop.js // 提示弹窗
+    fonts // 字体文件夹 src/styles/App.css中保存有CSS中对应字体名称
+        ApercuLight.ttf
+        ApercuMedium.ttf
+        ApercuRegular.ttf
+        SFProTextBold.ttf
+        SFProTextRegular.ttf
+    styles // 样式文件夹, 文件名与模块、组件文件对应
+        App.css
+        Bottle.css
+        Bottles.css
+        Home.css
+        index.css // 全局样式
+        Poster.css
+        Progress.css
+        WelcomePop.css
+    App.js // 应用组件文件
+    index.js // 入口文件
+    ResponsiveApp.js // 响应式组件
+    setupTests.js
+.babelrc // Babel配置
+.gitignore // git忽略配置
+config-overrides.js // 网站打包配置文件
+package-lock.json
+package.json
+README.md
+rollup.config.js // 组件打包配置
+```

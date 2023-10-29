@@ -3,6 +3,11 @@ import "../styles/Home.css";
 import logo from "../assets/logo.svg";
 import Welcome from "./WelcomePop";
 
+/**
+ * 首页
+ * @param {*} onStart:开始按钮回调; mode:模式pad|mobile|pc
+ * @returns 
+ */
 export default function Home({ onStart, mode }) {
   const [isWelcome, setIsWelcome] = useState(false);
   return (

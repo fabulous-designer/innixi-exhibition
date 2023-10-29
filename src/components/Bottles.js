@@ -2,6 +2,11 @@ import { useState, useRef } from "react";
 import Bottle from "./Bottle";
 import "../styles/Bottles.css";
 
+/**
+ * 瓶子列表模块
+ * @param {*} initialBottles:初始瓶子列表数据; isMobile:是否为mobile模式; onGeneratePoster:点击生成海报按钮回调; backHome:自动返回首页回调
+ * @returns 
+ */
 export default function Bottles({ initialBottles, isMobile, onGeneratePoster, backHome }) {
   const [bottles, setBottles] = useState(initialBottles);
   const timer = useRef(null);
@@ -19,6 +24,7 @@ export default function Bottles({ initialBottles, isMobile, onGeneratePoster, ba
       timer.current = null;
     }
     // console.log("start timer");
+    // 60未点击瓶子自动返回首页
     timer.current = setTimeout(() => {
       // console.log("back home");
       backHome();

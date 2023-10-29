@@ -3,6 +3,11 @@ import "../styles/Poster.css";
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+/**
+ * 海报页面
+ * @param {*} bottles:瓶子列表数据; mode:模式pad|mobile|pc; backHome:自动返回首页回调 
+ * @returns 
+ */
 export default function Poster({ bottles, mode, backHome }) {
   const filledBottles = bottles.filter((bottle) => bottle.percent);
   const showDefault = filledBottles.length === 1;

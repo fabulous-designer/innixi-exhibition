@@ -1,5 +1,10 @@
 import "../styles/WelcomePop.css";
 import check from "../assets/check.svg";
+/**
+ * 弹窗提示模块
+ * @param {*} onClick:点击回调 
+ * @returns 
+ */
 export default function WelcomePop({ onClick }) {
   return (
     <div className="welcome" onClick={onClick}>

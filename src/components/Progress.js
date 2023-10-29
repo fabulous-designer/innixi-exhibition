@@ -1,6 +1,11 @@
 import { useRef } from "react";
 import "../styles/Progress.css";
 
+/**
+ * 进度条页面
+ * @param {*} delay:进度条耗时单位ms; mode:模式pad|mobile|pc; onSuccess:成功时的回调
+ * @returns 
+ */
 export default function Progress({ delay, mode, onSuccess }) {
   const timerRef = useRef(null);
   if (timerRef.current === null) {
